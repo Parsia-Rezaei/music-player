@@ -1,0 +1,190 @@
+/* Images created by: https://unsplash.com/@pawel_czerwinski */
+
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
+
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  backdrop-filter: blur(12px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "League Spartan", sans-serif;
+  font-size: 12px;
+}
+
+/* .container {
+  padding: 0 20px;
+} */
+
+.img-container {
+  width: 300px;
+  height: 300px;
+  position: relative;
+  top: -30px;
+  margin: 0 auto;
+}
+
+.img-container img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 5px 30px 5px rgba(0,0,0,0.3);
+}
+
+.img-container img.active {
+  animation: scaleImage 300ms ease-in-out;
+}
+
+/* .img-container img.circle {
+} */
+
+@keyframes scaleImage {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes circleImage {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+:where(h2,h3,span) {
+  color: #fff;
+}
+
+h2 {
+  font-size: 25px;
+  text-align: center;
+  margin: 0;
+}
+
+h3 {
+  font-size: 20px;
+  text-align: center;
+  font-weight: 400;
+  margin: 5px 0 0;
+}
+
+/* Progress */
+.progress-container {
+  background: #5a189a;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 40px 20px;
+  height: 4px;
+  width: 90%;
+}
+
+.progress {
+  background: #9d4edd;
+  border-radius: 5px;
+  height: 100%;
+  /* change this to show progress */
+  width: 66%;
+  transition: width 0.1s linear;
+  position: relative;
+}
+
+.progress::after{
+  content: '';
+  position: absolute;
+  top: -5px;
+  right: 0;
+  height:15px;
+  width:15px;
+  display: block;
+  background-color: #9d4edd;
+  border-radius: 50%;
+  /* transition: 100ms; */
+}
+
+.progress:hover::after{
+ transform: scale(1.2);
+}
+
+.duration-wrapper {
+  position: relative;
+  top: -25px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.player-container{
+    height: 500px;
+    width: 400px;
+    background-color: #252422;
+    border-radius: 20px;
+    box-shadow: 0 15px 30px 5px rgba(0,0,0,0.1);
+    padding: 0 20px;
+    margin: 0 20px;
+}
+
+/* Controls */
+.player-controls {
+  position: relative;
+  top: -15px;
+  left: 120px;
+  width: 200px;
+}
+
+.fas {
+  font-size: 30px;
+  color: #9d4edd;
+  margin-right: 30px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.fas:hover{
+  color:#c77dff ;
+}
+
+.main-button {
+  font-size: 40px;
+  position: relative;
+  top: 3px;
+}
+
+/* Media Query: iPhone (Vertical) */
+@media screen and (max-width: 376px) {
+
+  .player-container {
+    width: 92vw;
+  }
+
+  /* .img-container {
+      width: 250px;
+      height: 250px;
+  } */
+
+  h2 {
+    font-size: 20px;
+  }
+
+  h3 {
+    font-size: 15px;
+  }
+
+  .player-controls {
+    top: -10px;
+    left: 100px;
+  }
+}
