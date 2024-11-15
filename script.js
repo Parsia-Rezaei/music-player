@@ -12,24 +12,32 @@ const nextBtn = document.getElementById("next")
 
 const songs = [
     {
-        name:'jacinto-1',
+        name:'Enemy',
         displayName:'song one',
-        artist: 'jacinto design'
+        artist: 'Imagine Dragons',
+        img:"/music-player/img/imagine-dragons-1.jpg",
+        src:'/music-player/music/20_Imagine_Dragons,_JID,_Arcane,_League_Of_Legends_Enemy_from_the.mp3',
     },
     {
-        name:'jacinto-2',
+        name:'Eyes Closed',
         displayName:'song two',
-        artist:'jacinto design 2'
+        artist:'Imagine Dragons',
+        img:'/music-player/img/imagine-dragons-2.jpg',
+        src:'/music-player/music/Imagine Dragons – Eyes Closed.mp3',
     },
     {
-        name:'jacinto-3',
+        name:'jumpsuit',
         displayName:'song three',
-        artist:'jacinto design 3'
+        artist:'Twenty One Pilots',
+        img:'/music-player/img/twenty-one-pilots-1.jpg',
+        src:'/music-player/music/Jumpsuit - TWENTY ONE PILOTS.mp3',
     },
     {
-        name:'metric-1',
+        name:'Saturday',
         displayName:'song four',
-        artist:'jacinto design 4'
+        artist:'Twenty One Pilots',
+        img:'/music-player/img/twenty-one-pilots-2.jpg',
+        src:'/music-player/music/Twenty One Pilots - Saturday.mp3',
     },
 ]
 
@@ -38,9 +46,9 @@ let isPlaying = false;
 const loadSong = (song) => {
     title.textContent = song.name;
     artist.textContent = song.artist;
-    music.src = `music/${song.name}.mp3`;
-    image.src = `img/${song.name}.jpg`;
-    document.body.style.backgroundImage = `url("img/${song.name}.jpg")`;
+    music.src = song.src;
+    image.src = song.img;
+    document.body.style.backgroundImage = `url(${song.img})`;
 
 }
 
