@@ -129,7 +129,7 @@ h3 {
 
 .player-container{
     height: 500px;
-    width: 400px;
+    width: min(80vw , 400px);
     background-color: #252422;
     border-radius: 20px;
     box-shadow: 0 15px 30px 5px rgba(0,0,0,0.1);
@@ -139,16 +139,17 @@ h3 {
 
 /* Controls */
 .player-controls {
-  position: relative;
-  top: -15px;
-  left: 120px;
-  width: 200px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap:40px ;
 }
 
 .fas {
   font-size: 30px;
   color: #9d4edd;
-  margin-right: 30px;
+  /* margin-right: 30px; */
   cursor: pointer;
   user-select: none;
 }
@@ -160,31 +161,15 @@ h3 {
 .main-button {
   font-size: 40px;
   position: relative;
-  top: 3px;
 }
 
 /* Media Query: iPhone (Vertical) */
 @media screen and (max-width: 376px) {
-
-  .player-container {
-    width: 92vw;
-  }
-
-  /* .img-container {
-      width: 250px;
-      height: 250px;
-  } */
-
   h2 {
     font-size: 20px;
   }
 
   h3 {
     font-size: 15px;
-  }
-
-  .player-controls {
-    top: -10px;
-    left: 100px;
   }
 }
